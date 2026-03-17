@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Master v5 - Clinical Edition</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f1f5f9; font-family: 'Inter', sans-serif; color: #0f172a; line-height: 1.6; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .card { background: white; border-radius: 20px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .btn-link { display: block; width: 100%; background: #4338ca; color: white; padding: 1rem; border-radius: 12px; text-align: center; font-weight: 700; margin-top: 0.5rem; }
+        .sos-badge { background: #fee2e2; color: #dc2626; font-size: 0.7rem; padding: 4px 10px; border-radius: 99px; font-weight: 800; margin-bottom: 0.5rem; display: inline-block; }
+        details summary { cursor: pointer; font-weight: 700; color: #4338ca; list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; }
+        .clinic-grid { display: grid; grid-template-cols: 1fr 1fr; gap: 0.5rem; font-size: 0.75rem; }
+        .clinic-item { background: #f8fafc; padding: 0.5rem; border-radius: 8px; border: 1px solid #e2e8f0; }
+    </style>
+</head>
+<body class="pb-32">
+
+    <header class="bg-slate-900 text-white p-6 sticky top-0 z-50 shadow-2xl">
+        <div class="max-w-xl mx-auto flex justify-between items-center">
+            <div>
+                <h1 class="text-xl font-bold tracking-tight">Recovery Master <span class="text-indigo-400 text-sm">v5.0</span></h1>
+                <p class="text-slate-400 text-[10px] uppercase tracking-tighter font-black">Biologische Sicherheit & Klinische Evidenz</p>
+            </div>
+            <div class="h-3 w-3 bg-green-500 rounded-full animate-pulse"></div>
+        </div>
+    </header>
+
+    <main class="p-4 max-w-xl mx-auto">
+        
+        <div id="sos" class="tab-content active text-sm">
+            <button class="w-full bg-red-600 text-white font-black py-5 rounded-2xl mb-6 shadow-xl uppercase tracking-widest text-lg">🚨 Biologische Sicherheit</button>
+            
+            <div class="card border-t-8 border-red-600">
+                <div class="sos-badge">Hydration SOS</div>
+                <h3 class="font-bold text-lg mb-1">Akute Tachykardie / Hitze</h3>
+                <p class="text-gray-600 mb-4">Bei Puls > 120 oder Hitze-Gefühl:</p>
+                <div class="bg-blue-50 p-4 rounded-xl border border-blue-100 text-blue-900 font-medium">
+                    "1-2 Prisen Salz (Meersalz/Himalaya) in 500ml Wasser. Sofort trinken. Stabilisiert das Blutvolumen mechanisch."
+                </div>
+            </div>
+
+            <div class="card border-t-8 border-orange-500">
+                <div class="sos-badge">Posturale Manöver (OI/POTS)</div>
+                <h3 class="font-bold text-lg mb-1">Gegenmaßnahmen im Stehen</h3>
+                <p class="text-gray-600 mb-3 text-xs italic">Wenn Hinlegen nicht möglich ist, nutze die "Muskelpumpe":</p>
+                <ul class="space-y-2">
+                    <li class="bg-orange-50 p-2 rounded border-l-4 border-orange-400"><strong>Beine überkreuzen:</strong> Drückt Blut aktiv nach oben.</li>
+                    <li class="bg-orange-50 p-2 rounded border-l-4 border-orange-400"><strong>Waden-Anspannung:</strong> Isometrische Kontraktion (Pumpe).</li>
+                    <li class="bg-orange-50 p-2 rounded border-l-4 border-orange-400"><strong>Po-Muskeln anspannen:</strong> Maximale Blutumverteilung zum Gehirn.</li>
+                </ul>
+            </div>
+
+            <div class="card border-t-8 border-indigo-500">
+                <div class="sos-badge">CDR Exit Strategy</div>
+                <h3 class="font-bold text-lg mb-1">Cell Danger Response verlassen</h3>
+                <p class="text-xs text-gray-500 italic mb-2">Signalisiere deinen Zellen: "Der Krieg ist vorbei."</p>
+                <p class="leading-relaxed">Schließe die Augen. Atme durch die Nase. Berühre deine Brustbeinkante. Bestätige innerlich: <em>"Ich schütze meine Energie. Meine Zellen dürfen den Abwehrmodus verlassen. Wir sind in Sicherheit."</em></p>
+            </div>
+        </div>
+
+        <div id="media" class="tab-content">
+            <h2 class="text-xl font-bold mb-4">Vagus & Mitochondrien</h2>
+            
+            <div class="card border-l-8 border-green-500">
+                <h3 class="font-bold mb-3">Vagus-Reset Masterlist</h3>
+                <div class="space-y-2 text-sm">
+                    <div class="p-2 bg-green-50 rounded"><strong>Ohr-Massage:</strong> Concha (Ohrinnenraum) sanft kreisen.</div>
+                    <div class="p-2 bg-green-50 rounded"><strong>Augen-Shift:</strong> Kopf starr, Augen extrem nach rechts halten.</div>
+                    <div class="p-2 bg-green-50 rounded"><strong>Kaltes Wasser:</strong> Gesicht 10 Sek. eintauchen (Mammalian Dive Reflex).</div>
+                </div>
+            </div>
+
+            <div class="card border-l-8 border-yellow-500">
+                <h3 class="font-bold mb-2">Mitochondrien-Kickstart</h3>
+                <p class="text-xs text-gray-500 mb-3">Aktivierung durch Umweltreize:</p>
+                <ul class="text-sm space-y-2">
+                    <li class="flex items-center gap-2">☀️ <strong>Morgensonne:</strong> 10 Min. Infrarot (Sonne) für die ATP-Produktion.</li>
+                    <li class="flex items-center gap-2">🔴 <strong>Rotlicht/Panel:</strong> Fördert Cytochrom-C-Oxidase (Zellatmung).</li>
+                    <li class="flex items-center gap-2">💊 <strong>Supplements:</strong> Magnesium (Glycinat), Q10 (Ubiquinol), B-Vitamine.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="edu" class="tab-content text-sm">
+            <h2 class="text-xl font-bold mb-4 italic">Klinische Bibliothek</h2>
+
+            <div class="card bg-indigo-900 text-white">
+                <h3 class="font-bold text-lg mb-2">Das CDR-Konzept (Naviaux)</h3>
+                <p class="text-xs leading-relaxed opacity-90 italic">
+                    Wenn Zellen bedroht werden (Viren, Hitze, Stress), stellen sie die ATP-Produktion ein, um dem "Feind" die Energie zu entziehen. Dein Körper ist nicht "schwach", er führt eine Belagerungssperre durch. Recovery heißt, die Belagerung aufzuheben.
+                </p>
+            </div>
+
+            <details class="card">
+                <summary>Mitochondrien-Zentrum <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>ATP-Drosselung:</strong> Im "Protection Mode" verbraucht die Zelle Ressourcen für Abwehr statt für Energie. Das Ergebnis ist Brain Fog und Fatigue.</p>
+                    <p><strong>Lichttherapie:</strong> Infrarotlicht (Sonne/Lampe) dringt in die Mitochondrien ein und hilft, die Energiekette wieder anzuwerfen.</p>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary>Arzt-Checkliste (CCC-Kriterien) <span>▼</span></summary>
+                <div class="mt-3 border-t pt-3">
+                    <p class="font-bold mb-2 text-indigo-700 uppercase text-[10px]">Die 6 Säulen der Kanadischen Konsenskriterien:</p>
+                    <div class="clinic-grid">
+                        <div class="clinic-item">1. Fatigue (> 6 Monate)</div>
+                        <div class="clinic-item">2. PEM (Crash nach Belastung)</div>
+                        <div class="clinic-item">3. Schlaf-Störungen</div>
+                        <div class="clinic-item">4. Schmerz (Muskel/Kopf)</div>
+                        <div class="clinic-item">5. Neurologisch (Fog/Gedächtnis)</div>
+                        <div class="clinic-item">6. Autonom (POTS/Hitze)</div>
+                    </div>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary>Wichtige Laborwerte <span>▼</span></summary>
+                <div class="mt-3 border-t pt-3">
+                    <p class="text-xs mb-3 italic">Fordere diese Werte beim Arzt an, um andere Ursachen auszuschließen:</p>
+                    <div class="clinic-grid">
+                        <div class="clinic-item"><strong>ANA / ENA:</strong> Autoimmun-Ausschluss</div>
+                        <div class="clinic-item"><strong>TPO / fT3 / fT4:</strong> Schilddrüse (Hashimoto?)</div>
+                        <div class="clinic-item"><strong>Ferritin:</strong> Eisenspeicher (> 100 angestrebt)</div>
+                        <div class="clinic-item"><strong>Vitamin D3:</strong> Immunsystem-Basis</div>
+                        <div class="clinic-item"><strong>EBV / VZV:</strong> Reaktivierung prüfen?</div>
+                        <div class="clinic-item"><strong>B12 / Holo-TC:</strong> Nerven-Schutz</div>
+                    </div>
+                </div>
+            </details>
+        </div>
+
+    </main>
+
+    <nav class="fixed bottom-0 w-full bg-white border-t border-slate-200 flex justify-around p-5 shadow-[0_-10px_20px_rgba(0,0,0,0.05)] z-50">
+        <button onclick="showTab('sos')" class="flex flex-col items-center text-[10px] font-black uppercase text-slate-400 focus:text-indigo-600"><span class="text-2xl mb-1">🚨</span>SOS</button>
+        <button onclick="showTab('media')" class="flex flex-col items-center text-[10px] font-black uppercase text-slate-400 focus:text-indigo-600"><span class="text-2xl mb-1">⚡</span>Power</button>
+        <button onclick="showTab('edu')" class="flex flex-col items-center text-[10px] font-black uppercase text-slate-400 focus:text-indigo-600"><span class="text-xl mb-1 text-2xl">📖</span>Library</button>
+    </nav>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
