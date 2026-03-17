@@ -3,152 +3,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recovery Master v8 - Clinical Mastery</title>
+    <title>Recovery Companion Pro v4</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        :root { --primary: #4338ca; --sos: #dc2626; --vagus: #10b981; --bg: #f8fafc; }
-        body { background-color: var(--bg); font-family: 'Inter', sans-serif; color: #1e293b; line-height: 1.5; }
+        body { background-color: #f1f5f9; font-family: 'Inter', sans-serif; color: #0f172a; line-height: 1.5; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        .card { background: white; border-radius: 20px; padding: 1.25rem; margin-bottom: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
-        .btn-link { display: block; width: 100%; background: #f1f5f9; color: var(--primary); padding: 0.8rem; border-radius: 12px; text-align: center; font-weight: 700; font-size: 0.85rem; margin-top: 0.5rem; border: 1px solid #e2e8f0; }
-        .sos-btn { background: var(--sos); color: white; width: 100%; padding: 1.25rem; border-radius: 16px; font-weight: 900; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1rem; }
-        details summary { cursor: pointer; font-weight: 700; color: var(--primary); list-style: none; padding: 0.5rem 0; border-bottom: 1px solid #f1f5f9; display: flex; justify-content: space-between; }
-        .badge { font-size: 0.65rem; padding: 2px 8px; border-radius: 6px; font-weight: bold; text-transform: uppercase; }
-        .instruction-box { background: #f8fafc; padding: 0.75rem; border-radius: 10px; border-left: 4px solid var(--vagus); margin-top: 0.5rem; font-size: 0.85rem; }
+        .card { background: white; border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .btn-link { display: block; width: 100%; background: #4338ca; color: white; padding: 1rem; border-radius: 12px; text-align: center; font-weight: 600; margin-top: 0.5rem; transition: transform 0.1s; }
+        .btn-link:active { transform: scale(0.97); }
+        details summary { cursor: pointer; font-weight: 700; color: #4338ca; list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; }
+        details[open] summary { margin-bottom: 1rem; border-bottom: 1px solid #e2e8f0; }
+        .badge { font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; font-weight: bold; margin-bottom: 8px; display: inline-block; }
+        .vagus-step { background: #f8fafc; padding: 0.75rem; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 0.5rem; font-size: 0.85rem; }
     </style>
 </head>
-<body class="pb-32">
+<body class="pb-28">
 
-    <header class="bg-indigo-950 text-white p-6 sticky top-0 z-50 shadow-2xl">
-        <div class="max-w-xl mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-xl font-bold">Recovery Master <span class="text-indigo-400">v8</span></h1>
-                <p class="text-indigo-300 text-[10px] uppercase font-black tracking-widest">Clinical & Biological Mastery</p>
-            </div>
-            <div class="h-2 w-2 bg-green-500 rounded-full animate-pulse"></div>
+    <header class="bg-indigo-900 text-white p-6 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-xl mx-auto">
+            <h1 class="text-xl font-bold">Recovery Master Companion</h1>
+            <p class="text-indigo-300 text-xs">V4: Deep Vagus & Expert Knowledge</p>
         </div>
     </header>
 
     <main class="p-4 max-w-xl mx-auto">
         
         <div id="sos" class="tab-content active text-sm">
-            <button class="sos-btn shadow-xl">🚨 SOS: Akute Regulation</button>
+            <button class="w-full bg-red-600 text-white font-bold py-5 rounded-2xl mb-6 shadow-lg uppercase tracking-wider">🚨 SOS: Hitze & Puls</button>
             
-            <div class="card border-l-8 border-red-600">
-                <span class="badge bg-red-100 text-red-700">Puls-Wächter</span>
-                <h3 class="font-bold mt-1">Die Aerobe Sicherheitszone</h3>
-                <p class="text-xs text-gray-600 mt-2">
-                    Halte deinen Puls konsequent im Bereich von <strong>100 - 110 BPM</strong>. 
-                </p>
-                <div class="bg-red-50 p-3 rounded-lg mt-3 border border-red-100">
-                    <p class="font-bold text-red-700 text-xs uppercase">Pace-Alarm (120 BPM):</p>
-                    <p class="text-xs mt-1 italic text-red-900">Sofort: Beine an die Wand (90° Winkel). Blutrückführung & Vagus-Entlastung einleiten.</p>
-                </div>
+            <div class="card border-l-8 border-red-500">
+                <h3 class="font-bold text-red-700">Sofort-Maßnahmen</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><strong>1. Horizontale:</strong> Sofort flach hinlegen. Das entlastet das Herz bei POTS augenblicklich.</li>
+                    <li><strong>2. Kühlung:</strong> Eispack oder kaltes Wasser auf die Halsschlagader (Vagus-Trigger!).</li>
+                    <li><strong>3. Reframing:</strong> Sag laut: "Symptome sind sicher. Mein Gehirn versucht mich zu schützen, aber es gibt keine Gefahr."</li>
+                </ul>
             </div>
-
-            <div class="card border-l-8 border-cyan-500">
-                <span class="badge bg-cyan-100 text-cyan-700">Quick-Fix: Kälte</span>
-                <p class="mt-2 text-xs font-bold">Anwendung:</p>
-                <p class="text-xs italic">Kaltes Wasser, Eiswürfel oder Kühlpack sanft an die Schläfen, den Nacken oder ins Gesicht auftragen.</p>
-                <p class="text-[10px] mt-2 text-gray-500"><strong>Wirkung:</strong> Triggert physisch den Parasympathikus und beendet den hitzebedingten Alarm-Modus.</p>
-            </div>
+            <a href="https://www.youtube.com/watch?v=elOOJQxb2Qg" target="_blank" class="btn-link">Geführte Akzeptanz-Meditation</a>
         </div>
 
-        <div id="vagus" class="tab-content">
-            <h2 class="text-xl font-bold mb-4">Vagus-Regulation</h2>
-
-            <div class="card">
-                <span class="badge bg-emerald-100 text-emerald-700">Somatische Technik</span>
-                <h3 class="font-bold mt-1">Ganzkörper-Abklopfen (Bottom-up)</h3>
-                <div class="instruction-box">
-                    <strong>Anleitung:</strong> Mit Fingerkuppen oder flacher Hand sanft klopfen: <br>
-                    Brustkorb → Schlüsselbein → Schultern → Arme → Hände → Nierenpunkt (Rücken) → Beine → Kopf.
-                </div>
-                <p class="text-[10px] mt-2 text-gray-500"><strong>Wirkung:</strong> Fördert die Erdung und reguliert das ANS durch gezielte taktile Reize.</p>
-            </div>
-
-            <div class="card">
-                <span class="badge bg-blue-100 text-blue-700">Neuroathletik</span>
-                <h3 class="font-bold mt-1">Der Halbe Salamander</h3>
-                <div class="instruction-box">
-                    <strong>Anleitung:</strong> Kopf sanft zum rechten Ohr neigen. Augen blicken nun extrem nach <strong>LINKS OBEN</strong>. Halten bis Gähnen, Schlucken oder tiefes Seufzen kommt. Dann Seite wechseln.
-                </div>
-                <p class="text-[10px] mt-2 text-gray-500"><strong>Wirkung:</strong> Direkte Stimulation von Hirnstamm-Arealen für Basisregulation.</p>
-            </div>
-
-            <div class="card">
-                <span class="badge bg-indigo-100 text-indigo-700">Mechanische Reizung</span>
-                <h3 class="font-bold mt-1">Voicing & Gurgeln</h3>
-                <div class="instruction-box">
-                    <strong>Anleitung:</strong> Tief durch die Nase einatmen. Beim langen Ausatmen ein tiefes Summen ("Mmmm") im Kehlkopf erzeugen. Alternativ: Kräftig mit Wasser gurgeln.
-                </div>
-                <p class="text-[10px] mt-2 text-gray-500"><strong>Wirkung:</strong> Vibration aktiviert den Vagusnerv direkt über die Kehlkopfmuskulatur.</p>
-            </div>
+        <div id="media" class="tab-content">
+            <h2 class="text-xl font-bold mb-4 italic">Deine Werkzeugkiste</h2>
             
-            <a href="https://youtu.be/BALTOxc0xJY" target="_blank" class="btn-link">Buteyko-Atmung Tutorial</a>
-        </div>
+            <div class="card">
+                <span class="badge bg-green-100 text-green-700">Körper & Vagusnerv</span>
+                <h3 class="font-bold mb-3 text-lg text-green-800">Vagusnerv-Aktivierung</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">1. Die Basis-Übung (Wendy Jones)</p>
+                        <div class="vagus-step">Hände hinter dem Kopf verschränken. Nur mit den Augen ganz nach rechts schauen. Halten (30-60 Sek), bis du gähnst, schluckst oder tief einatmest. Dann links.</div>
+                    </div>
 
-        <div id="mind" class="tab-content">
-            <h2 class="text-xl font-bold mb-4">Sicherheit herstellen</h2>
-            
-            <div class="card border-l-8 border-orange-400">
-                <h3 class="font-bold mb-2 text-sm">Die 5-Sinne-Übung (Orientierung)</h3>
-                <p class="text-xs text-gray-600 mb-3">Benenne in deiner Umgebung:</p>
-                <div class="grid grid-cols-5 gap-1 text-[10px] font-bold text-center">
-                    <div class="bg-orange-50 p-2 rounded">5 Sehen</div>
-                    <div class="bg-orange-50 p-2 rounded">4 Fühlen</div>
-                    <div class="bg-orange-50 p-2 rounded">3 Hören</div>
-                    <div class="bg-orange-50 p-2 rounded">2 Riechen</div>
-                    <div class="bg-orange-50 p-2 rounded">1 Schmecken</div>
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">2. Vagus-Ohr-Massage (Sehr sanft)</p>
+                        <div class="vagus-step">Massiere sanft die Innenseite deiner Ohrmuschel (Concha) mit dem Zeigefinger. Dort verlaufen Vagus-Endungen. Atme dabei tief in den Bauch.</div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">3. Die "Salamander"-Übung</p>
+                        <div class="vagus-step">Lasse den Kopf zur rechten Schulter sinken. Schaue nun mit den Augen nach LINKS oben. Halten, bis ein Entspannungszeichen kommt. Löst Nackenverspannungen.</div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">4. Sanftes Summen / Voicing</p>
+                        <div class="vagus-step">Atme tief ein. Beim Ausatmen summe ein tiefes "Vooo" oder "Mmmm". Die Vibration im Hals stimuliert den Vagusnerv direkt.</div>
+                    </div>
                 </div>
             </div>
 
-            <div class="card border-l-8 border-indigo-600">
-                <h3 class="font-bold text-sm">Bewusste Langsamkeit (20% Regel)</h3>
-                <p class="text-xs text-gray-600 mt-1 italic">Signal: "Es besteht keine Fluchtgefahr."</p>
-                <p class="text-xs mt-2">Führe eine Handlung (z.B. Eincremen) 20% langsamer aus als gewöhnlich.</p>
-                <div id="timer-display" class="text-3xl font-black text-center text-indigo-600 my-3">00:30</div>
-                <button onclick="startTimer(30)" class="btn-link bg-indigo-600 text-white">Timer Starten</button>
+            <div class="card">
+                <span class="badge bg-purple-100 text-purple-700">Geist</span>
+                <h3 class="font-bold mb-2">Deep Rest & Meditation</h3>
+                <div class="bg-indigo-50 p-4 rounded-lg text-sm italic leading-relaxed text-indigo-900 mb-4">
+                    <strong>Selbst-Lese-Meditation:</strong> "Ich lasse den Widerstand gegen die Hitze los. Mein Körper weiß, wie er kühlt. Ich bin sicher im Schatten meines Geistes. Mein Puls darf fließen wie ein ruhiger Fluss. Ich bin hier. Ich bin sicher."
+                </div>
+                <a href="https://www.youtube.com/watch?v=7H5nASZhgm8" target="_blank" class="btn-link bg-indigo-600">Yoga Nidra (Ally Boothroyd)</a>
             </div>
         </div>
 
         <div id="edu" class="tab-content text-sm">
-            <h2 class="text-xl font-bold mb-4">Klinisches Verständnis</h2>
-
-            <div class="card bg-indigo-900 text-white border-none">
-                <h3 class="font-bold text-indigo-300 uppercase text-xs tracking-widest mb-2">Warum wir üben</h3>
-                <div class="space-y-3 text-xs leading-relaxed opacity-90">
-                    <p><strong>1. Sympathikotonus (Alarm):</strong> Bei ME/CFS verweilt das System im chronischen "Kampf-oder-Flucht"-Modus. Folge: Hoher Puls und Energiestopp.</p>
-                    <p><strong>2. Die Fehlsteuerung:</strong> Dein System ist nicht kaputt, sondern überempfindlich. Es stuft Licht, Lärm oder Hitze fälschlich als Lebensgefahr ein.</p>
-                    <p><strong>3. Das Ziel (Ventraler Vagus):</strong> Wir signalisieren dem "Erholungsnerv" Sicherheit. Das senkt die Herzfrequenz und startet die Zellreparatur.</p>
-                </div>
-            </div>
-
-            <div class="card border-t-4 border-green-500">
-                <h3 class="font-bold text-xs uppercase mb-3">Erfolgskontrolle: Regulation wirkt bei...</h3>
-                <div class="space-y-2 text-xs">
-                    <label class="flex items-center gap-2"><input type="checkbox"> Gähnen</label>
-                    <label class="flex items-center gap-2"><input type="checkbox"> Tiefes Seufzen oder Schlucken</label>
-                    <label class="flex items-center gap-2"><input type="checkbox"> Bauchgrummeln (Verdauung setzt ein)</label>
-                    <label class="flex items-center gap-2"><input type="checkbox"> Weiche Schultern</label>
-                    <label class="flex items-center gap-2"><input type="checkbox"> Klarerer Kopf (weniger Fog)</label>
-                </div>
-            </div>
+            <h2 class="text-xl font-bold mb-4">Wissens-Datenbank</h2>
 
             <details class="card">
-                <summary>Klinische Laborwerte & CCC <span>▼</span></summary>
-                <p class="text-[10px] mt-2 leading-relaxed">Ferritin (>100), ANA/ENA, TPO, fT3, fT4, Vit D3, B12 (Holo-TC). CCC-Kriterien: Fatigue, PEM, Schlaf, Schmerz, Neuro, Autonom.</p>
+                <summary>Blooming Health (Anna Grefen) <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>Baseline & Pacing:</strong> Heilung beginnt erst, wenn das System aufhört zu crashen. Nutze die 70%-Regel (höre auf, wenn du noch 30% Energie hast).</p>
+                    <p><strong>POTS-Hacks:</strong> Salz-Lade-Protokoll, Kompression und vor allem das Training der CO2-Toleranz durch Nasenatmung (verhindert Hyperventilation im Brain Fog).</p>
+                </div>
             </details>
+
+            <details class="card">
+                <summary>The Way Out (Alan Gordon) <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>Somatic Tracking:</strong> Lerne, Symptome ohne Angst zu beobachten. Wenn du Hitze spürst, beschreibe sie neutral: "Es ist warm, es pulsiert." Vermeide Katastrophen-Wörter wie "unerträglich".</p>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary>JournalSpeak (Nicole Sachs) <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>Emotionale Entlastung:</strong> 20 Min. Journaling über "unzulässige" Gefühle. Das Nervensystem nutzt Symptome oft als Ablenkung von innerem Stress. Lass den Stress raus, das Symptom kann gehen.</p>
+                </div>
+            </details>
+
+            <div class="card bg-gray-50 italic text-[10px] text-center">
+                Hinweis: Diese App ersetzt keinen ärztlichen Rat. Sie dient der Begleitung deines neuroplastischen Weges.
+            </div>
         </div>
 
     </main>
 
-    <nav class="fixed bottom-0 w-full bg-white border-t border-slate-200 flex justify-around p-4 shadow-2xl z-50">
-        <button onclick="showTab('sos')" class="flex flex-col items-center text-[9px] font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🚨</span>SOS</button>
-        <button onclick="showTab('vagus')" class="flex flex-col items-center text-[9px] font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🌿</span>Vagus</button>
-        <button onclick="showTab('mind')" class="flex flex-col items-center text-[9px] font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🧘</span>Geist</button>
-        <button onclick="showTab('edu')" class="flex flex-col items-center text-[9px] font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">📚</span>Klinik</button>
+    <nav class="fixed bottom-0 w-full bg-white border-t flex justify-around p-4 shadow-2xl z-50">
+        <button onclick="showTab('sos')" class="flex flex-col items-center text-xs font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🚨</span>SOS</button>
+        <button onclick="showTab('media')" class="flex flex-col items-center text-xs font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🧘</span>Übung</button>
+        <button onclick="showTab('edu')" class="flex flex-col items-center text-xs font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">📚</span>Wissen</button>
     </nav>
 
     <script>
@@ -156,21 +126,6 @@
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.getElementById(tabId).classList.add('active');
             window.scrollTo(0,0);
-        }
-
-        function startTimer(seconds) {
-            let timeLeft = seconds;
-            const display = document.getElementById('timer-display');
-            const interval = setInterval(() => {
-                timeLeft--;
-                let mins = Math.floor(timeLeft / 60);
-                let secs = timeLeft % 60;
-                display.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-                if (timeLeft <= 0) {
-                    clearInterval(interval);
-                    display.innerText = "FERTIG";
-                }
-            }, 1000);
         }
     </script>
 </body>
