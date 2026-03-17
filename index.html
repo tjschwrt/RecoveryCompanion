@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recovery Companion Pro v4</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body { background-color: #f1f5f9; font-family: 'Inter', sans-serif; color: #0f172a; line-height: 1.5; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .card { background: white; border-radius: 16px; padding: 1.5rem; margin-bottom: 1rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .btn-link { display: block; width: 100%; background: #4338ca; color: white; padding: 1rem; border-radius: 12px; text-align: center; font-weight: 600; margin-top: 0.5rem; transition: transform 0.1s; }
+        .btn-link:active { transform: scale(0.97); }
+        details summary { cursor: pointer; font-weight: 700; color: #4338ca; list-style: none; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; }
+        details[open] summary { margin-bottom: 1rem; border-bottom: 1px solid #e2e8f0; }
+        .badge { font-size: 0.7rem; padding: 3px 8px; border-radius: 6px; font-weight: bold; margin-bottom: 8px; display: inline-block; }
+        .vagus-step { background: #f8fafc; padding: 0.75rem; border-radius: 8px; border-left: 4px solid #10b981; margin-bottom: 0.5rem; font-size: 0.85rem; }
+    </style>
+</head>
+<body class="pb-28">
+
+    <header class="bg-indigo-900 text-white p-6 sticky top-0 z-50 shadow-xl">
+        <div class="max-w-xl mx-auto">
+            <h1 class="text-xl font-bold">Recovery Master Companion</h1>
+            <p class="text-indigo-300 text-xs">V4: Deep Vagus & Expert Knowledge</p>
+        </div>
+    </header>
+
+    <main class="p-4 max-w-xl mx-auto">
+        
+        <div id="sos" class="tab-content active text-sm">
+            <button class="w-full bg-red-600 text-white font-bold py-5 rounded-2xl mb-6 shadow-lg uppercase tracking-wider">🚨 SOS: Hitze & Puls</button>
+            
+            <div class="card border-l-8 border-red-500">
+                <h3 class="font-bold text-red-700">Sofort-Maßnahmen</h3>
+                <ul class="mt-2 space-y-2">
+                    <li><strong>1. Horizontale:</strong> Sofort flach hinlegen. Das entlastet das Herz bei POTS augenblicklich.</li>
+                    <li><strong>2. Kühlung:</strong> Eispack oder kaltes Wasser auf die Halsschlagader (Vagus-Trigger!).</li>
+                    <li><strong>3. Reframing:</strong> Sag laut: "Symptome sind sicher. Mein Gehirn versucht mich zu schützen, aber es gibt keine Gefahr."</li>
+                </ul>
+            </div>
+            <a href="https://www.youtube.com/watch?v=elOOJQxb2Qg" target="_blank" class="btn-link">Geführte Akzeptanz-Meditation</a>
+        </div>
+
+        <div id="media" class="tab-content">
+            <h2 class="text-xl font-bold mb-4 italic">Deine Werkzeugkiste</h2>
+            
+            <div class="card">
+                <span class="badge bg-green-100 text-green-700">Körper & Vagusnerv</span>
+                <h3 class="font-bold mb-3 text-lg text-green-800">Vagusnerv-Aktivierung</h3>
+                
+                <div class="space-y-4">
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">1. Die Basis-Übung (Wendy Jones)</p>
+                        <div class="vagus-step">Hände hinter dem Kopf verschränken. Nur mit den Augen ganz nach rechts schauen. Halten (30-60 Sek), bis du gähnst, schluckst oder tief einatmest. Dann links.</div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">2. Vagus-Ohr-Massage (Sehr sanft)</p>
+                        <div class="vagus-step">Massiere sanft die Innenseite deiner Ohrmuschel (Concha) mit dem Zeigefinger. Dort verlaufen Vagus-Endungen. Atme dabei tief in den Bauch.</div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">3. Die "Salamander"-Übung</p>
+                        <div class="vagus-step">Lasse den Kopf zur rechten Schulter sinken. Schaue nun mit den Augen nach LINKS oben. Halten, bis ein Entspannungszeichen kommt. Löst Nackenverspannungen.</div>
+                    </div>
+
+                    <div>
+                        <p class="font-bold text-sm text-gray-700 mb-2">4. Sanftes Summen / Voicing</p>
+                        <div class="vagus-step">Atme tief ein. Beim Ausatmen summe ein tiefes "Vooo" oder "Mmmm". Die Vibration im Hals stimuliert den Vagusnerv direkt.</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <span class="badge bg-purple-100 text-purple-700">Geist</span>
+                <h3 class="font-bold mb-2">Deep Rest & Meditation</h3>
+                <div class="bg-indigo-50 p-4 rounded-lg text-sm italic leading-relaxed text-indigo-900 mb-4">
+                    <strong>Selbst-Lese-Meditation:</strong> "Ich lasse den Widerstand gegen die Hitze los. Mein Körper weiß, wie er kühlt. Ich bin sicher im Schatten meines Geistes. Mein Puls darf fließen wie ein ruhiger Fluss. Ich bin hier. Ich bin sicher."
+                </div>
+                <a href="https://www.youtube.com/watch?v=7H5nASZhgm8" target="_blank" class="btn-link bg-indigo-600">Yoga Nidra (Ally Boothroyd)</a>
+            </div>
+        </div>
+
+        <div id="edu" class="tab-content text-sm">
+            <h2 class="text-xl font-bold mb-4">Wissens-Datenbank</h2>
+
+            <details class="card">
+                <summary>Blooming Health (Anna Grefen) <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>Baseline & Pacing:</strong> Heilung beginnt erst, wenn das System aufhört zu crashen. Nutze die 70%-Regel (höre auf, wenn du noch 30% Energie hast).</p>
+                    <p><strong>POTS-Hacks:</strong> Salz-Lade-Protokoll, Kompression und vor allem das Training der CO2-Toleranz durch Nasenatmung (verhindert Hyperventilation im Brain Fog).</p>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary>The Way Out (Alan Gordon) <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>Somatic Tracking:</strong> Lerne, Symptome ohne Angst zu beobachten. Wenn du Hitze spürst, beschreibe sie neutral: "Es ist warm, es pulsiert." Vermeide Katastrophen-Wörter wie "unerträglich".</p>
+                </div>
+            </details>
+
+            <details class="card">
+                <summary>JournalSpeak (Nicole Sachs) <span>▼</span></summary>
+                <div class="mt-3 space-y-3 border-t pt-3">
+                    <p><strong>Emotionale Entlastung:</strong> 20 Min. Journaling über "unzulässige" Gefühle. Das Nervensystem nutzt Symptome oft als Ablenkung von innerem Stress. Lass den Stress raus, das Symptom kann gehen.</p>
+                </div>
+            </details>
+
+            <div class="card bg-gray-50 italic text-[10px] text-center">
+                Hinweis: Diese App ersetzt keinen ärztlichen Rat. Sie dient der Begleitung deines neuroplastischen Weges.
+            </div>
+        </div>
+
+    </main>
+
+    <nav class="fixed bottom-0 w-full bg-white border-t flex justify-around p-4 shadow-2xl z-50">
+        <button onclick="showTab('sos')" class="flex flex-col items-center text-xs font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🚨</span>SOS</button>
+        <button onclick="showTab('media')" class="flex flex-col items-center text-xs font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">🧘</span>Übung</button>
+        <button onclick="showTab('edu')" class="flex flex-col items-center text-xs font-bold text-gray-400 focus:text-indigo-600"><span class="text-xl">📚</span>Wissen</button>
+    </nav>
+
+    <script>
+        function showTab(tabId) {
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+            window.scrollTo(0,0);
+        }
+    </script>
+</body>
+</html>
