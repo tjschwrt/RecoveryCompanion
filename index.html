@@ -7,68 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --primary: #4338ca; --sos: #dc2626; --vagus: #10b981; --bg: #f8fafc; --text: #1e293b; }
-        
-        body { 
-            background-color: var(--bg); 
-            font-family: 'Inter', sans-serif; 
-            color: var(--text); 
-            line-height: 1.7; 
-            font-size: 16px; 
-        }
-
+        body { background-color: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.7; font-size: 16px; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
-        
-        .card { 
-            background: white; 
-            border-radius: 20px; 
-            padding: 1.5rem; 
-            margin-bottom: 1.5rem; 
-            border: 1px solid #e2e8f0; 
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-        }
-
-        .btn-link { 
-            display: block; width: 100%; background: #f1f5f9; color: var(--primary); 
-            padding: 1.2rem; border-radius: 12px; text-align: center; font-weight: 700; 
-            font-size: 16px; margin-top: 1rem; border: 1px solid #e2e8f0; 
-        }
-
-        .sos-btn { 
-            background: var(--sos); color: white; width: 100%; padding: 1.5rem; 
-            border-radius: 16px; font-weight: 900; text-transform: uppercase; 
-            font-size: 18px; margin-bottom: 1.5rem; letter-spacing: 1px;
-        }
-
-        .badge { 
-            font-size: 14px; padding: 6px 12px; border-radius: 8px; font-weight: bold; 
-            text-transform: uppercase; display: inline-block; margin-bottom: 0.75rem; 
-        }
-
-        .instruction-box { 
-            background: #f8fafc; padding: 1.5rem; border-radius: 12px; 
-            border-left: 5px solid var(--vagus); margin: 1.25rem 0; font-size: 16px; 
-        }
-
-        .lab-category { 
-            border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 35px; 
-        }
-
-        /* Globale Sicherstellung der Schriftgröße */
+        .card { background: white; border-radius: 20px; padding: 1.5rem; margin-bottom: 1.5rem; border: 1px solid #e2e8f0; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+        .sos-btn { background: var(--sos); color: white; width: 100%; padding: 1.5rem; border-radius: 16px; font-weight: 900; text-transform: uppercase; font-size: 18px; margin-bottom: 1.5rem; }
+        .badge { font-size: 14px; padding: 6px 12px; border-radius: 8px; font-weight: bold; text-transform: uppercase; display: inline-block; margin-bottom: 0.75rem; }
+        .instruction-box { background: #f8fafc; padding: 1.5rem; border-radius: 12px; border-left: 5px solid var(--vagus); margin: 1.25rem 0; font-size: 16px; }
+        .lab-category { border-left: 4px solid var(--primary); padding-left: 15px; margin-bottom: 30px; }
+        .phase-btn { transition: all 0.3s; border: 2px solid transparent; font-weight: 800; }
+        .phase-btn.active { background-color: var(--primary) !important; color: white !important; }
         p, div, li, summary, span, label { font-size: 16px !important; }
-        h3 { font-size: 1.25rem !important; line-height: 1.3; }
-        
-        nav button { font-size: 14px !important; font-weight: 800 !important; }
+        nav button { font-size: 12px !important; font-weight: 800 !important; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
 <body class="pb-36">
 
-    <header class="bg-indigo-950 text-white p-6 sticky top-0 z-50 shadow-xl">
+    <header class="bg-indigo-950 text-white p-6 sticky top-0 z-50">
         <div class="max-w-xl mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-xl font-bold">Recovery Master</h1>
-                <p class="text-indigo-300 text-xs uppercase font-black tracking-tighter opacity-80">Full Content & Accessibility</p>
-            </div>
+            <h1 class="text-xl font-bold">Recovery Master</h1>
             <div class="h-3 w-3 bg-green-500 rounded-full animate-pulse"></div>
         </div>
     </header>
@@ -77,175 +35,127 @@
         
         <div id="sos" class="tab-content active">
             <button class="sos-btn">🚨 SOS: Akute Regulation</button>
-            
-            <div class="card border-l-8 border-red-600">
-                <span class="badge bg-red-100 text-red-700">Puls-Wächter</span>
-                <h3 class="font-bold">Die Aerobe Sicherheitszone</h3>
-                <p class="mt-2">Halte deinen Puls konsequent im Bereich von <strong>100 - 110 BPM</strong>.</p>
-                <div class="bg-red-50 p-4 rounded-lg mt-4 border border-red-100">
-                    <p class="font-bold text-red-700 uppercase">Pace-Alarm (120 BPM):</p>
-                    <p class="italic text-red-900">Sofort: Beine an die Wand (90° Winkel). Blutrückführung & Vagus-Entlastung einleiten.</p>
-                </div>
-            </div>
-
-            <div class="card border-l-8 border-cyan-500">
-                <span class="badge bg-cyan-100 text-cyan-700">Quick-Fix: Kälte</span>
-                <p class="font-bold">Anwendung:</p>
-                <p class="italic">Kaltes Wasser, Eiswürfel oder Kühlpack sanft an die Schläfen, den Nacken oder ins Gesicht auftragen.</p>
-                <p class="mt-4 text-gray-500"><strong>Wirkung:</strong> Triggert physisch den Parasympathikus und hilft dem Körper, den hitzebedingten Alarm-Modus zu verlassen.</p>
-            </div>
+            <div id="sos-content"></div>
         </div>
 
         <div id="vagus" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6">Vagus-Regulation</h2>
-
-            <div class="card">
-                <span class="badge bg-emerald-100 text-emerald-700">Somatische Technik</span>
-                <h3 class="font-bold">Ganzkörper-Abklopfen (Bottom-up)</h3>
-                <div class="instruction-box">
-                    <strong>Anleitung:</strong> Beginne sanft mit den Fingerkuppen oder der flachen Hand. Klopfe in dieser Reihenfolge: Brustkorb → Schlüsselbein → Schultern → Arme → Hände. Gehe dann zum Rücken und klopfe den „Nierenpunkt“ (oberhalb der Hüftknochen). Klopfe die Beine von allen Seiten ab und beende die Übung am Kopf (Stirn, Augenbrauen, Scheitel).
-                </div>
-                <p class="text-gray-500"><strong>Wirkung:</strong> Es reguliert das Nervensystem durch taktile Reize und fördert die Erdung.</p>
-            </div>
-
-            <div class="card">
-                <span class="badge bg-blue-100 text-blue-700">Neuroathletik</span>
-                <h3 class="font-bold">Der „Halbe Salamander“</h3>
-                <div class="instruction-box">
-                    <strong>Anleitung:</strong> Neige den Kopf sanft zu einer Seite (z. B. rechtes Ohr zur rechten Schulter). Blicke nun mit beiden Augen so weit wie möglich nach links oben. Halte die Position, bis du ein Entspannungszeichen (Gähnen, Schlucken oder tiefes Seufzen) spürst. Wiederhole dies auf der anderen Seite.
-                </div>
-                <p class="text-gray-500"><strong>Wirkung:</strong> Direkte Stimulation von Hirnstamm-Arealen, die für die Basisregulation zuständig sind.</p>
-            </div>
-
-            <div class="card">
-                <span class="badge bg-indigo-100 text-indigo-700">Mechanische Reizung</span>
-                <h3 class="font-bold">Voicing & Gurgeln</h3>
-                <div class="instruction-box">
-                    <strong>Anleitung:</strong> Atme tief durch die Nase ein. Erzeuge beim langen Ausatmen ein tiefes Summen („Mmmm“) im Kehlkopf. Alternativ hilft kräftiges Gurgeln mit Wasser.
-                </div>
-                <p class="text-gray-500"><strong>Wirkung:</strong> Da der Vagusnerv den Kehlkopf versorgt, wird er durch die Vibration direkt aktiviert.</p>
-            </div>
-            
-            <a href="https://youtu.be/BALTOxc0xJY" target="_blank" class="btn-link">Buteyko-Atmung Tutorial</a>
+            <h2 class="text-2xl font-bold mb-6 text-indigo-900">Vagus-Regulation</h2>
+            <div id="vagus-content"></div>
+            <a href="https://youtu.be/BALTOxc0xJY" target="_blank" class="block w-full bg-slate-100 text-indigo-600 p-4 rounded-xl text-center font-bold border border-slate-200 mt-4">Buteyko-Atmung Tutorial</a>
         </div>
 
         <div id="mind" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6">Sicherheit herstellen</h2>
-            
-            <div class="card border-l-8 border-orange-400">
-                <h3 class="font-bold mb-3">Die 5-Sinne-Übung (Orientierung)</h3>
-                <p class="text-gray-600 mb-4 italic">Scanne deine Umgebung, um dem Gehirn Orientierungssicherheit zu geben:</p>
-                <div class="space-y-3 text-center font-bold">
-                    <div class="bg-orange-50 p-4 rounded border border-orange-100">5 Dinge sehen</div>
-                    <div class="bg-orange-50 p-4 rounded border border-orange-100">4 Dinge fühlen</div>
-                    <div class="bg-orange-50 p-4 rounded border border-orange-100">3 Dinge hören</div>
-                    <div class="bg-orange-50 p-4 rounded border border-orange-100">2 Dinge riechen</div>
-                    <div class="bg-orange-50 p-4 rounded border border-orange-100">1 Ding schmecken</div>
-                </div>
-            </div>
-
+            <h2 class="text-2xl font-bold mb-6 text-indigo-900">Sicherheit & Geist</h2>
+            <div id="mind-content"></div>
             <div class="card border-l-8 border-indigo-600">
-                <h3 class="font-bold">Bewusste Langsamkeit (20% Regel)</h3>
-                <p class="mt-4">Führe eine alltägliche Handlung (z. B. Händewaschen oder Eincremen) 20 % langsamer aus als gewöhnlich.</p>
-                <p class="text-gray-500 mt-4 italic">Langsamkeit signalisiert dem ANS: „Es besteht keine akute Gefahr, vor der wir fliehen müssten“.</p>
+                <h3 class="font-bold">20% Regel (Langsamkeit)</h3>
+                <p class="mt-2">Führe eine Handlung 20 % langsamer aus. Dies signalisiert dem ANS Sicherheit.</p>
                 <div id="timer-display" class="text-5xl font-black text-center text-indigo-600 my-8">00:30</div>
-                <button onclick="startTimer(30)" class="btn-link bg-indigo-600 text-white border-none shadow-lg">Timer Starten</button>
+                <button onclick="startTimer(30)" class="w-full bg-indigo-600 text-white p-4 rounded-xl font-bold">Timer Starten</button>
             </div>
+        </div>
+
+        <div id="brain" class="tab-content">
+            <h2 class="text-2xl font-bold mb-4 text-indigo-900">Neuro-Retraining</h2>
+            <div class="card bg-indigo-950 text-white border-none mb-6">
+                <p class="mb-2 uppercase text-xs font-bold text-indigo-300 tracking-widest text-center">HPA-Achsen-Formel</p>
+                <div class="text-3xl font-serif text-center my-4">$$C = f(B \cdot S_L)$$</div>
+                <p class="text-sm opacity-80 italic text-center">Bedrohung (B) senken durch PRT & Polyvagal-Arbeit.</p>
+            </div>
+            <div class="flex gap-2 mb-8 overflow-x-auto pb-2 no-scrollbar" id="phase-nav"></div>
+            <div id="phase-content"></div>
         </div>
 
         <div id="edu" class="tab-content">
-            <h2 class="text-2xl font-bold mb-6">Klinik</h2>
-
-            <div class="card bg-indigo-950 text-white border-none">
-                <h3 class="font-bold text-indigo-300 uppercase text-sm mb-6">Biologisches Verständnis</h3>
-                
-                <p class="mb-4 font-bold text-indigo-200">Der Alarm-Zustand (Sympathikotonus):</p>
-                <p class="mb-6">Bei ME/CFS verweilt das autonome Nervensystem (ANS) oft in einem chronischen Stresszustand, dem „Kampf-oder-Flucht“-Modus. Dies führt zu einem unangemessen hohen Puls (bis zu 120 BPM bei minimaler Last) und verhindert, dass der Körper in den Erholungsmodus wechselt.</p>
-                
-                <p class="mb-4 font-bold text-indigo-200">Die Fehlsteuerung:</p>
-                <p class="mb-6">Das Nervensystem ist nicht „kaputt“, sondern reagiert überempfindlich auf Reize (Licht, Geräusche, Bewegung), die es fälschlicherweise als Gefahr einstuft.</p>
-                
-                <p class="mb-4 font-bold text-indigo-200">Das Ziel (Ventraler Vagus):</p>
-                <p class="mb-4">Durch gezielte Stimulation des Vagusnervs – dem „Ruhe- und Erholungsnerv“ – signalisieren wir dem System Sicherheit, was die Herzfrequenz senkt und regenerative Prozesse (Zellreparatur, Verdauung) ermöglicht.</p>
-            </div>
-
-            <div class="card bg-slate-100 border-l-4 border-slate-400">
-                <h3 class="font-bold text-sm uppercase mb-2">Wichtig: Der klinische Kontext</h3>
-                <p>ME/CFS Patienten haben oft "unauffällige" Standardwerte. Wir suchen nach den Feinheiten, die Fatigue, POTS und Mitochondrien-Stress erklären.</p>
-            </div>
-
-            <div class="card">
-                <h3 class="font-bold text-xl mb-8">Klinische Laborwerte Checkliste</h3>
-                
-                <div class="lab-category">
-                    <p class="font-bold text-indigo-800 uppercase text-sm mb-4">Entzündung & Organmarker</p>
-                    <p><strong>Differentialblutbild & CRP:</strong> Ausschluss von akuten Infekten oder klassischer Anämie (Blutarmut).</p>
-                    <p class="mt-4"><strong>Leber- und Nierenwerte sowie Urin:</strong> Basisprüfung der Entgiftungsorgane; Ausschluss metabolischer Ursachen für Erschöpfung.</p>
-                </div>
-
-                <div class="lab-category">
-                    <p class="font-bold text-indigo-800 uppercase text-sm mb-4">Nährstoffe / Mangelzustände</p>
-                    <p><strong>Ferritin (Eisenspeicher):</strong> Zielwert >100. Eisen ist zentral für die Sauerstoffbindung und die Mitochondrienfunktion. Ein Mangel simuliert POTS-Symptome.</p>
-                    <p class="mt-4"><strong>Vitamin D3:</strong> Zentraler Regulator des Immunsystems. Ein Mangel verstärkt Entzündungsneigungen.</p>
-                    <p class="mt-4"><strong>Vitamin B12 (Holo-Transcobalamin) & Folsäure:</strong> Holo-TC zeigt den aktiven B12-Status. Essenziell für Nervenschutz und Blutbildung.</p>
-                    <p class="mt-4"><strong>Zink und Selen:</strong> Wichtige Kofaktoren für das Immunsystem und die Schilddrüse (T4 zu T3 Konvertierung).</p>
-                </div>
-
-                <div class="lab-category">
-                    <p class="font-bold text-indigo-800 uppercase text-sm mb-4">Stoffwechsel & Mitochondrien</p>
-                    <p><strong>Elektrolyte (Natrium, Kalium, Calcium, Phosphat):</strong> Kritisch für die Reizweiterleitung im Herzen. Natriummangel verschlimmert POTS massiv.</p>
-                    <p class="mt-4"><strong>Kreatinkinase (CK) und LDH:</strong> Marker für Zellschäden oder Muskelentzündungen; relevant bei PEM-Verdacht.</p>
-                    <p class="mt-4"><strong>Nüchtern Blutzucker:</strong> Ausschluss von Insulinresistenz oder Diabetes als Fatigue-Quelle.</p>
-                </div>
-
-                <div class="lab-category">
-                    <p class="font-bold text-indigo-800 uppercase text-sm mb-4">Autoimmun-Screening</p>
-                    <p><strong>ANA (Titer & Muster) sowie ENA:</strong> Screening auf systemische Autoimmunerkrankungen (Lupus, Sjögren), die Fatigue auslösen.</p>
-                    <p class="mt-4"><strong>TSH, fT3, fT4 & TPO-Antikörper:</strong> Schilddrüsen-Check. TPO-Antikörper prüfen auf Hashimoto. fT3 ist das "Gaspedal" der Zellen.</p>
-                </div>
-            </div>
-
-            <div class="card border-t-8 border-green-500">
-                <h3 class="font-bold text-lg mb-6">Erfolgskontrolle: Zeichen der Regulation</h3>
-                <div class="space-y-4 font-bold">
-                    <label class="flex items-center gap-4 p-2 border-b border-slate-50"><input type="checkbox" class="w-6 h-6"> Gähnen</label>
-                    <label class="flex items-center gap-4 p-2 border-b border-slate-50"><input type="checkbox" class="w-6 h-6"> Tiefes Seufzen oder Schlucken</label>
-                    <label class="flex items-center gap-4 p-2 border-b border-slate-50"><input type="checkbox" class="w-6 h-6"> Bauchgrummeln (die Verdauung setzt ein)</label>
-                    <label class="flex items-center gap-4 p-2 border-b border-slate-50"><input type="checkbox" class="w-6 h-6"> Gefühl von Weichheit in den Schultern</label>
-                    <label class="flex items-center gap-4 p-2 border-b border-slate-50"><input type="checkbox" class="w-6 h-6"> Ein klarerer Kopf (weniger Brain Fog)</label>
-                </div>
-            </div>
+            <h2 class="text-2xl font-bold mb-6 text-indigo-900">Klinik & Labor</h2>
+            <div id="edu-content"></div>
         </div>
+
     </main>
 
     <nav class="fixed bottom-0 w-full bg-white border-t p-4 flex justify-around shadow-2xl z-50">
-        <button onclick="showTab('sos')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 transition-all"><span class="text-3xl">🚨</span>SOS</button>
-        <button onclick="showTab('vagus')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 transition-all"><span class="text-3xl">🌿</span>Vagus</button>
-        <button onclick="showTab('mind')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 transition-all"><span class="text-3xl">🧘</span>Geist</button>
-        <button onclick="showTab('edu')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 transition-all"><span class="text-3xl">📚</span>Klinik</button>
+        <button onclick="showTab('sos')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🚨</span>SOS</button>
+        <button onclick="showTab('vagus')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🌿</span>Vagus</button>
+        <button onclick="showTab('mind')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🧘</span>Geist</button>
+        <button onclick="showTab('brain')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🧠</span>Neuro</button>
+        <button onclick="showTab('edu')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">📚</span>Klinik</button>
     </nav>
 
     <script>
-        function showTab(tabId) {
-            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
-            document.getElementById(tabId).classList.add('active');
+        const appData = {
+            sos: [
+                { t: "Puls-Wächter", c: "Halte deinen Puls konsequent im Bereich von 100 - 110 BPM. Bei Überschreiten der 120 BPM: Sofort Beine an die Wand (90° Winkel). Dies entlastet das System.", badge: "Aktion" },
+                { t: "Quick-Fix: Kälte", c: "Kaltes Wasser oder Kühlpack an Schläfen oder Nacken. Triggert den Parasympathikus.", badge: "Vagus" }
+            ],
+            vagus: [
+                { t: "Ganzkörper-Abklopfen", c: "Reihenfolge: Brustkorb → Schlüsselbein → Schultern → Arme → Hände → Rücken → Beine → Kopf.", instr: "Anleitung: Mit Fingerkuppen sanft klopfen." },
+                { t: "Halber Salamander", c: "Kopf zur Schulter neigen, Augen zur entgegengesetzten Seite blicken lassen bis zum Gähnen/Schlucken.", instr: "Neuroathletik" },
+                { t: "Voicing & Gurgeln", c: "Tiefes Summen (Mmmm) beim Ausatmen stimuliert den Vagus direkt am Kehlkopf.", instr: "Mechanik" }
+            ],
+            mind: [
+                { t: "5-Sinne-Orientierung", c: "Scanne die Umgebung: 5 Dinge sehen, 4 fühlen, 3 hören, 2 riechen, 1 schmecken.", badge: "Erdung" }
+            ],
+            retraining: [
+                { phase: "Phase 1", t: "Woche 1–4", focus: "Sicherheit erzeugen", items: [
+                    { t: "Psychoedukation", c: "Verständnis der neuroplastischen Natur. Beweise sammeln, dass Symptome variabel sind." },
+                    { t: "WUUU-Atmung", c: "Vibration beim Ausatmen zur Zwerchfell-Stimulation (nach Peter Levine)." },
+                    { t: "Symptom-Reframing", c: "Üben: „Vielen Dank, Gehirn, für den Schutzversuch, aber ich bin in Sicherheit.“" }
+                ]},
+                { phase: "Phase 2", t: "Monat 2–3", focus: "Muster unterbrechen", items: [
+                    { t: "JournalSpeak", c: "30 Min. ehrliches Schreiben über Kindheit, Alltag und Perfektionismus." },
+                    { t: "Somatic Tracking", c: "Symptome neugierig und wertfrei beobachten (Wärme, Kribbeln, Druck)." },
+                    { t: "Musterunterbrechung", c: "Stopp-Technik bei negativen Gedankenketten, gefolgt von Fokuswechsel." }
+                ]},
+                { phase: "Phase 3", t: "Monat 4–6", focus: "Expansion", items: [
+                    { t: "Inkrementelles Training", c: "Aktivität in winzigen Schritten steigern (+2 Min.), nur bei Gefühl der Sicherheit." },
+                    { t: "Parts Work", c: "Dialog mit dem inneren 'Leister' oder 'Beschützer' führen." },
+                    { t: "Die 70%-Regel", c: "Nie mehr als 70% der Kapazität verbrauchen, um PEM zu vermeiden." }
+                ]}
+            ],
+            labor: [
+                { cat: "Entzündung & Organe", items: [
+                    { t: "Diff-Blutbild & CRP", c: "Ausschluss von Infekten oder Anämie." },
+                    { t: "Leber & Nieren", c: "Basisprüfung der Entgiftungsorgane." }
+                ]},
+                { cat: "Nährstoffe", items: [
+                    { t: "Ferritin (Ziel >100)", c: "Zentral für Sauerstoffbindung und Mitochondrien." },
+                    { t: "B12 & Vitamin D3", c: "Holo-TC für aktives B12 (Nervenschutz). D3 für das Immunsystem." }
+                ]},
+                { cat: "Stoffwechsel & Autoimmun", items: [
+                    { t: "Elektrolyte", c: "Natriummangel verschlimmert POTS massiv." },
+                    { t: "Schilddrüse & ANA", c: "TSH, fT3, fT4 (Gaspedal). ANA für systemischen Autoimmun-Check." }
+                ]}
+            ]
+        };
+
+        function showTab(id) {
+            document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
             window.scrollTo(0,0);
+            if(id === 'brain') renderPhase(0);
         }
 
-        function startTimer(seconds) {
-            let timeLeft = seconds;
-            const display = document.getElementById('timer-display');
-            const interval = setInterval(() => {
-                timeLeft--;
-                let mins = Math.floor(timeLeft / 60);
-                let secs = timeLeft % 60;
-                display.innerText = `${mins.toString().padStart(2, '0')}:${secs.toString().padStart(2, '0')}`;
-                if (timeLeft <= 0) {
-                    clearInterval(interval);
-                    display.innerText = "FERTIG";
-                }
-            }, 1000);
+        function renderInitial() {
+            document.getElementById('sos-content').innerHTML = appData.sos.map(i => `<div class="card border-l-8 border-red-500"><span class="badge bg-red-100 text-red-700">${i.badge}</span><h3 class="font-bold">${i.t}</h3><p>${i.c}</p></div>`).join('');
+            document.getElementById('vagus-content').innerHTML = appData.vagus.map(i => `<div class="card"><span class="badge bg-emerald-100 text-emerald-700">${i.instr}</span><h3 class="font-bold">${i.t}</h3><p>${i.c}</p></div>`).join('');
+            document.getElementById('mind-content').innerHTML = appData.mind.map(i => `<div class="card border-l-8 border-orange-400"><span class="badge bg-orange-100 text-orange-700">${i.badge}</span><h3 class="font-bold">${i.t}</h3><p>${i.c}</p></div>`).join('');
+            document.getElementById('edu-content').innerHTML = appData.labor.map(c => `<div class="card"><h3 class="font-bold text-indigo-800 uppercase text-sm mb-4">${c.cat}</h3>${c.items.map(i => `<div class="lab-category"><p><strong>${i.t}:</strong> ${i.c}</p></div>`).join('')}</div>`).join('');
+            document.getElementById('phase-nav').innerHTML = appData.retraining.map((p, idx) => `<button onclick="renderPhase(${idx})" class="phase-btn bg-white px-6 py-3 rounded-xl shadow-sm border border-slate-200 whitespace-nowrap">${p.phase}</button>`).join('');
         }
+
+        function renderPhase(idx) {
+            const p = appData.retraining[idx];
+            document.getElementById('phase-content').innerHTML = `<div class="mb-4"><span class="badge bg-indigo-100 text-indigo-700">${p.focus}</span><h3 class="text-xl font-bold">${p.t}</h3></div>` + 
+                p.items.map(i => `<div class="card"><h4 class="font-bold text-indigo-900 mb-2">${i.t}</h4><p>${i.c}</p></div>`).join('');
+            document.querySelectorAll('.phase-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
+        }
+
+        function startTimer(s) {
+            let t = s; const d = document.getElementById('timer-display');
+            const i = setInterval(() => { t--; d.innerText = `00:${t.toString().padStart(2,'0')}`; if(t<=0){clearInterval(i); d.innerText="FERTIG";}}, 1000);
+        }
+
+        renderInitial();
     </script>
 </body>
 </html>
