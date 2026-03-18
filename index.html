@@ -7,6 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         :root { --primary: #4338ca; --sos: #dc2626; --vagus: #10b981; --bg: #f8fafc; --text: #1e293b; }
+        .dark { --bg: #0f172a; --text: #f1f5f9; --card-bg: #1e293b; --card-border: #334155; --nav-bg: #1e293b; }
         body { background-color: var(--bg); font-family: 'Inter', sans-serif; color: var(--text); line-height: 1.8; font-size: 16px; }
         .tab-content { display: none; }
         .tab-content.active { display: block; }
@@ -23,30 +24,31 @@
 </head>
 <body class="pb-40">
 
-    <header class="bg-indigo-950 text-white p-6 sticky top-0 z-50">
-        <div class="max-w-2xl mx-auto flex justify-center items-center">
-            <h1 class="text-xl font-bold">Recovery Master <span class="text-indigo-400"></span></h1>
-        </div>
-    </header>
+   <header class="bg-indigo-950 text-white p-6 sticky top-0 z-50 flex justify-between items-center">
+    <div class="w-8"></div> <h1 class="text-xl font-bold">Recovery Master</h1>
+    <button onclick="toggleDarkMode()" class="p-2 bg-indigo-900 rounded-lg text-xl">
+        <span id="dark-icon">🌙</span>
+    </button>
+</header>
 
     <main class="p-4 max-w-2xl mx-auto">
         
-        <div id="sos" class="tab-content">
-            <button class="sos-btn">🚨 SOS: Akute Regulation</button>
+        <div id="sos" class="tab-content text-center">
+            <h2 class="text-3xl font-bold mb-8 text-indigo-900">Akute Regulation</h2>
             <div id="sos-content"></div>
         </div>
 
-        <div id="vagus" class="tab-content">
+        <div id="vagus" class="tab-content active text-center">
             <h2 class="text-3xl font-bold mb-8 text-indigo-900">Vagus-Nerv & Autonomes System</h2>
             <div id="vagus-content"></div>
         </div>
 
-        <div id="mind" class="tab-content">
+        <div id="mind" class="tab-content text-center">
             <h2 class="text-3xl font-bold mb-8 text-indigo-900">Mentaler Fokus & Sicherheit</h2>
             <div id="mind-content"></div>
         </div>
 
-        <div id="brain" class="tab-content active">
+        <div id="brain" class="tab-content text-center">
             <h2 class="text-3xl font-bold mb-6 text-indigo-900">Neuroplastizität & Retraining</h2>
             
             <div class="theory-box">
@@ -67,7 +69,7 @@
             <div id="phase-content"></div>
         </div>
 
-        <div id="edu" class="tab-content">
+        <div id="edu" class="tab-content text-center">
             <h2 class="text-3xl font-bold mb-8 text-indigo-900">Klinische Diagnostik & Labor</h2>
             <div id="edu-content"></div>
         </div>
@@ -75,11 +77,11 @@
     </main>
 
     <nav class="fixed bottom-0 w-full bg-white border-t p-4 flex justify-around shadow-2xl z-50">
-        <button onclick="showTab('sos')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🚨</span>SOS</button>
-        <button onclick="showTab('vagus')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🌿</span>Vagus</button>
-        <button onclick="showTab('mind')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">🧘</span>Geist</button>
-        <button onclick="showTab('brain')" class="flex flex-col items-center text-indigo-600 font-bold"><span class="text-2xl">🧠</span>Neuro</button>
-        <button onclick="showTab('edu')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600"><span class="text-2xl">📚</span>Klinik</button>
+        <button onclick="showTab('sos')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider"><span class="text-2xl">🚨</span>Notfallmanagement</button>
+        <button onclick="showTab('vagus')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider"><span class="text-2xl">🌿</span>Körper</button>
+        <button onclick="showTab('mind')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider"><span class="text-2xl">🧘</span>Mindset</button>
+        <button onclick="showTab('brain')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider"><span class="text-2xl">🧠</span>Brain Retraining</button>
+        <button onclick="showTab('edu')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider"><span class="text-2xl">📚</span>Biologie</button>
     </nav>
 
     <script>
