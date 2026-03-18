@@ -81,11 +81,11 @@
 </main>
 
 <nav class="fixed bottom-0 w-full bg-white dark:bg-slate-900 border-t dark:border-slate-800 p-4 flex justify-around shadow-2xl z-50">
-    <button onclick="showTab('sos')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">🚨</span>Notfallmanagement</button>
+    <button onclick="showTab('sos')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">🚨</span>Notfall</button>
     <button onclick="showTab('vagus')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">🌿</span>Körper</button>
     <button onclick="showTab('mind')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">🧘</span>Mindset</button>
-    <button onclick="showTab('brain')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">🧠</span>Brain Retraining</button>
-    <button onclick="showTab('edu')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">📚</span>Biologie</button>
+    <button onclick="showTab('brain')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">🧠</span>Brain</button>
+    <button onclick="showTab('edu')" class="flex flex-col items-center text-gray-400 focus:text-indigo-600 font-bold uppercase tracking-wider text-[10px]"><span class="text-2xl mb-1">📚</span>Bio</button>
 </nav>
 
 <script>
@@ -99,14 +99,14 @@
             { t: "Halber Salamander (Neuroathletik)", c: "Eine effektive Übung zur Mobilisierung des Vagusnervs am Hirnstamm. Neige den Kopf sanft zu einer Seite (rechtes Ohr zur rechten Schulter). Halte den Kopf dort, aber bewege nur die Augen so weit wie möglich nach links oben. Bleibe in dieser Position, bis ein reflexartiges Gähnen, Schlucken oder ein tiefer Seufzer erfolgt. Wiederhole den Vorgang auf der anderen Seite.", instr: "Übung" },
             { t: "Voicing & Zwerchfell-Resonanz", c: "Atme tief durch die Nase ein. Erzeuge beim langsamen Ausatmen ein tiefes, brummendes Summen („Mmmm“), das du im Brustkorb spüren kannst. Alternativ hilft kräftiges Gurgeln mit Wasser nach dem Zähneputzen. Da der Vagusnerv die Muskulatur des Kehlkopfs versorgt, wird er durch diese Vibrationen direkt stimuliert.", instr: "Technik" }
         ],
- mind: [
+        mind: [
             { 
                 t: "5-Sinne-Orientierung (Grounding)", 
-                c: "Nutze die 5-4-3-2-1 Technik zur sofortigen Unterbrechung von Symptom-Fokus:<br><br>" +
-                   "👁️ Nenne 5 Dinge, die du siehst <br><br>" +
-                   "💪 Nenne 4 Dinge, die du körperlich fühlst<br><br>" +
-                   "👂 Nenne 3 Dinge, die du hörst<br><br>" +
-                   "👃 Nenne 2 Dinge, die du riechst<br><br>" +
+                c: "Nutze die 5-4-3-2-1 Technik zur sofortigen Unterbrechung von Symptom-Fokus:\n\n" +
+                   "👁️ Nenne 5 Dinge, die du siehst \n" +
+                   "💪 Nenne 4 Dinge, die du körperlich fühlst\n" +
+                   "👂 Nenne 3 Dinge, die du hörst\n" +
+                   "👃 Nenne 2 Dinge, die du riechst\n" +
                    "👅 Nenne 1 Ding, das du schmeckst", 
                 badge: "Stabilisierung" 
             }
@@ -170,21 +170,22 @@
             document.getElementById('dark-icon').innerText = '☀️';
         }
 
-        document.getElementById('sos-content').innerHTML = appData.sos.map(i => `<div class="card border-l-8 border-red-500"><span class="badge bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">${i.badge}</span><h3>${i.t}</h3><p>${i.c}</p></div>`).join('');
-        document.getElementById('vagus-content').innerHTML = appData.vagus.map(i => `<div class="card border-l-8 border-emerald-500"><span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">${i.instr}</span><h3>${i.t}</h3><p>${i.c}</p></div>`).join('');
-        document.getElementById('mind-content').innerHTML = appData.mind.map(i => `<div class="card border-l-8 border-orange-400"><span class="badge bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">${i.badge}</span><h3>${i.t}</h3><p>${i.c}</p></div>`).join('');
+        document.getElementById('sos-content').innerHTML = appData.sos.map(i => `<div class="card border-l-8 border-red-500"><span class="badge bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400">${i.badge}</span><h3>${i.t}</h3><p>${i.c.replace(/\n/g, "<br>")}</p></div>`).join('');
         
-        let eduHtml = appData.labor.map(c => `
+        // Vagus (Körper) inklusive Erfolgskontrolle
+        let vagusHtml = appData.vagus.map(i => `<div class="card border-l-8 border-emerald-500"><span class="badge bg-emerald-100 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400">${i.instr}</span><h3>${i.t}</h3><p>${i.c.replace(/\n/g, "<br>")}</p></div>`).join('');
+        vagusHtml += `<div class="card bg-green-50 dark:bg-green-900/10 border-green-200"><h3 class="mb-6 w-full text-center text-green-800 dark:text-green-400">Erfolgskontrolle</h3><div class="space-y-4 w-full">
+            ${appData.erfolg.map(e => `<label class="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-green-100 dark:border-green-900 font-bold text-slate-900 dark:text-slate-100"><input type="checkbox" class="w-6 h-6 rounded text-green-600"> ${e}</label>`).join('')}
+            </div></div>`;
+        document.getElementById('vagus-content').innerHTML = vagusHtml;
+
+        document.getElementById('mind-content').innerHTML = appData.mind.map(i => `<div class="card border-l-8 border-orange-400"><span class="badge bg-orange-100 text-orange-700 dark:bg-orange-900/30 dark:text-orange-400">${i.badge}</span><h3>${i.t}</h3><p>${i.c.replace(/\n/g, "<br>")}</p></div>`).join('');
+        
+        document.getElementById('edu-content').innerHTML = appData.labor.map(c => `
             <div class="card">
                 <h3 class="text-indigo-800 dark:text-indigo-400 uppercase text-sm tracking-widest text-center w-full mb-6">${c.cat}</h3>
-                ${c.items.map(i => `<div class="lab-category"><p><strong>${i.t}:</strong><br>${i.c}</p></div>`).join('')}
+                ${c.items.map(i => `<div class="lab-category"><p><strong>${i.t}:</strong><br>${i.c.replace(/\n/g, "<br>")}</p></div>`).join('')}
             </div>`).join('');
-        
-        // HIER DIE KORREKTUR FÜR DIE LESBARKEIT (Text-slate-900 hinzugefügt)
-        eduHtml += `<div class="card bg-green-50 dark:bg-green-900/10"><h3 class="mb-6 w-full text-center dark:text-green-400">Erfolgskontrolle</h3><div class="space-y-4 w-full">
-            ${appData.erfolg.map(e => `<label class="flex items-center gap-4 p-4 bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-green-100 dark:border-green-900 font-bold text-slate-900 dark:text-slate-100"><input type="checkbox" class="w-6 h-6"> ${e}</label>`).join('')}
-            </div></div>`;
-        document.getElementById('edu-content').innerHTML = eduHtml;
 
         document.getElementById('phase-nav').innerHTML = appData.retraining.map((p, idx) => `<button onclick="renderPhase(${idx})" class="phase-btn whitespace-nowrap">${p.phase}</button>`).join('');
     }
@@ -196,7 +197,7 @@
                 <span class="badge bg-indigo-100 text-indigo-700 dark:bg-indigo-900/30 dark:text-indigo-400 mx-auto">${p.focus}</span>
                 <h3 class="text-2xl text-center w-full">${p.t}</h3>
             </div>
-            ${p.items.map(i => `<div class="card shadow-lg"><h3>${i.t}</h3><p>${i.c}</p></div>`).join('')}
+            ${p.items.map(i => `<div class="card shadow-lg"><h3>${i.t}</h3><p>${i.c.replace(/\n/g, "<br>")}</p></div>`).join('')}
         `;
         document.querySelectorAll('.phase-btn').forEach((b, i) => b.classList.toggle('active', i === idx));
     }
